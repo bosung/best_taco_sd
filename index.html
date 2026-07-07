@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Best Taco SD</title>
+  <style>
+    :root {
+      --sun: #ff9505;
+      --chili: #e63946;
+      --lime: #a7c957;
+      --cream: #fff8f0;
+      --ink: #2b2118;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background: radial-gradient(circle at 50% 20%, #ffd9a0 0%, var(--sun) 45%, var(--chili) 100%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero .taco {
+      font-size: clamp(4rem, 15vw, 9rem);
+      line-height: 1;
+      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.25));
+      animation: bob 3s ease-in-out infinite;
+    }
+
+    @keyframes bob {
+      0%, 100% { transform: translateY(0) rotate(-4deg); }
+      50% { transform: translateY(-14px) rotate(4deg); }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin: 1rem 0 0.5rem;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .hero p {
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      max-width: 40ch;
+      opacity: 0.95;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.9rem 2.2rem;
+      background: var(--ink);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 999px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.3);
+    }
+
+    /* ---------- Section ---------- */
+    section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 800;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-title span { color: var(--chili); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 1.75rem;
+      box-shadow: 0 4px 20px rgba(43,33,24,0.08);
+      border: 1px solid rgba(43,33,24,0.06);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(43,33,24,0.14);
+    }
+
+    .card .emoji { font-size: 2.5rem; }
+
+    .card h3 {
+      margin: 0.75rem 0 0.25rem;
+      font-size: 1.3rem;
+    }
+
+    .card .hood {
+      color: var(--chili);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .stars { color: var(--sun); margin-top: 0.5rem; }
+
+    /* ---------- Footer ---------- */
+    footer {
+      background: var(--ink);
+      color: #fff;
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+    }
+
+    footer .taco-mini { font-size: 1.6rem; }
+    footer p { opacity: 0.8; margin-top: 0.5rem; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="taco">🌮</div>
+    <h1>Best Taco SD</h1>
+    <p>Your definitive guide to the best taco spots in San Diego.</p>
+    <a class="cta" href="#spots">Find your taco →</a>
+  </header>
+
+  <section id="spots">
+    <h2 class="section-title">Top <span>Taco</span> Spots</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="emoji">🐟</div>
+        <div class="hood">Barrio Logan</div>
+        <h3>Salud!</h3>
+        <p>Legendary Baja-style fish tacos with a killer salsa bar.</p>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="card">
+        <div class="emoji">🔥</div>
+        <div class="hood">North Park</div>
+        <h3>City Tacos</h3>
+        <p>Creative gourmet tacos — try the shrimp and cochinita pibil.</p>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="card">
+        <div class="emoji">🌶️</div>
+        <div class="hood">Old Town</div>
+        <h3>Las Cuatro Milpas</h3>
+        <p>A San Diego institution. Rolled tacos worth the wait in line.</p>
+        <div class="stars">★★★★☆</div>
+      </div>
+      <div class="card">
+        <div class="emoji">🌮</div>
+        <div class="hood">Chula Vista</div>
+        <h3>Tacos El Gordo</h3>
+        <p>Authentic Tijuana-style adobada straight off the trompo.</p>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="taco-mini">🌮</div>
+    <p>Best Taco SD — made with love in San Diego.</p>
+  </footer>
+</body>
+</html>
